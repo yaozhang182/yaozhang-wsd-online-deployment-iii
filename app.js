@@ -33,7 +33,7 @@ const listMessage = async (request) => {
     messages: await messagesService.findAll(),
   };
 
-  return new Response(await renderFile("index.eta", data), responseDetails);
+  return new Response(await renderFile("count.eta", data), responseDetails);
 };
 
 const handleRequest = async (request) => {
