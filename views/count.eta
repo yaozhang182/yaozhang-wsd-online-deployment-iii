@@ -1,3 +1,17 @@
 <% layout('./layouts/layout.eta') %>
 
-<h1>Visits: <%= it.count %></h1>
+<h1>Chat</h1>
+
+<form method="POST">
+  Sender: <input type="text" name="sender" /><br/>
+  Message: <input type="text" name="message" /><br/>
+  <input type="submit" value="Submit!" />
+</form>
+
+<ul>
+<% it.messages.forEach((message) => { %>
+  <li>
+    <%= message.sender %>: <%= message.message %>
+  </li>
+<% }); %>
+</ul>
